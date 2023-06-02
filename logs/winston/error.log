@@ -1,0 +1,53 @@
+2023-06-02T06:37:02.847Z [right meow!] error: Failed to connect database querySrv ESERVFAIL _mongodb._tcp.atlascluster.zznsycg.mongodb.net
+{
+  level: 'error',
+  message: 'Failed to connect database The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.',
+  stack: 'MongooseError: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.\n' +
+    '    at _createMongoClient (C:\\programming hero\\university_management_auth_service\\node_modules\\mongoose\\lib\\connection.js:805:11)\n' +
+    '    at NativeConnection.openUri (C:\\programming hero\\university_management_auth_service\\node_modules\\mongoose\\lib\\connection.js:742:29)\n' +
+    '    at Mongoose.connect (C:\\programming hero\\university_management_auth_service\\node_modules\\mongoose\\lib\\index.js:406:15)\n' +
+    '    at C:\\programming hero\\university_management_auth_service\\src\\server.ts:8:20\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at C:\\programming hero\\university_management_auth_service\\src\\server.ts:8:71\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at __awaiter (C:\\programming hero\\university_management_auth_service\\src\\server.ts:4:12)\n' +
+    '    at main (C:\\programming hero\\university_management_auth_service\\src\\server.ts:21:12)\n' +
+    '    at Object.<anonymous> (C:\\programming hero\\university_management_auth_service\\src\\server.ts:17:1)',
+  label: 'right meow!',
+  timestamp: '2023-06-02T06:51:38.777Z'
+}
+{
+  level: 'error',
+  message: 'Failed to connect database The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.',
+  stack: 'MongooseError: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.\n' +
+    '    at _createMongoClient (C:\\programming hero\\university_management_auth_service\\node_modules\\mongoose\\lib\\connection.js:805:11)\n' +
+    '    at NativeConnection.openUri (C:\\programming hero\\university_management_auth_service\\node_modules\\mongoose\\lib\\connection.js:742:29)\n' +
+    '    at Mongoose.connect (C:\\programming hero\\university_management_auth_service\\node_modules\\mongoose\\lib\\index.js:406:15)\n' +
+    '    at C:\\programming hero\\university_management_auth_service\\src\\server.ts:8:20\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at C:\\programming hero\\university_management_auth_service\\src\\server.ts:8:71\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at __awaiter (C:\\programming hero\\university_management_auth_service\\src\\server.ts:4:12)\n' +
+    '    at main (C:\\programming hero\\university_management_auth_service\\src\\server.ts:21:12)\n' +
+    '    at Object.<anonymous> (C:\\programming hero\\university_management_auth_service\\src\\server.ts:17:1)',
+  label: 'right meow!',
+  timestamp: '2023-06-02T06:52:40.210Z'
+}
+Fri Jun 02 2023 12:52:55 [right meow!] error: Failed to connect database The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+{
+  level: 'error',
+  message: 'Failed to connect database The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.',
+  stack: 'MongooseError: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.\n' +
+    '    at _createMongoClient (C:\\programming hero\\university_management_auth_service\\node_modules\\mongoose\\lib\\connection.js:805:11)\n' +
+    '    at NativeConnection.openUri (C:\\programming hero\\university_management_auth_service\\node_modules\\mongoose\\lib\\connection.js:742:29)\n' +
+    '    at Mongoose.connect (C:\\programming hero\\university_management_auth_service\\node_modules\\mongoose\\lib\\index.js:406:15)\n' +
+    '    at C:\\programming hero\\university_management_auth_service\\src\\server.ts:8:20\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at C:\\programming hero\\university_management_auth_service\\src\\server.ts:8:71\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at __awaiter (C:\\programming hero\\university_management_auth_service\\src\\server.ts:4:12)\n' +
+    '    at main (C:\\programming hero\\university_management_auth_service\\src\\server.ts:21:12)\n' +
+    '    at Object.<anonymous> (C:\\programming hero\\university_management_auth_service\\src\\server.ts:17:1)',
+  label: 'right meow!',
+  timestamp: '2023-06-02T06:53:09.190Z'
+}

@@ -1,0 +1,60 @@
+{"level":"info","message":"Database is connected to successfully"}
+{"level":"info","message":"Application listening on port 5000"}
+2023-06-02T06:37:54.424Z [right meow!] info: Database is connected to successfully
+2023-06-02T06:37:54.442Z [right meow!] info: Application listening on port 5000
+2023-06-02T06:37:59.860Z [right meow!] info: Database is connected to successfully
+2023-06-02T06:37:59.873Z [right meow!] info: Application listening on port 5000
+ [right meow!] info: Database is connected to successfully 2023-06-02T06:38:47.736Z
+ [right meow!] info: Application listening on port 5000 2023-06-02T06:38:47.759Z
+2023-06-02T06:39:10.153Z [right meow!] info: Database is connected to successfully
+2023-06-02T06:39:10.170Z [right meow!] info: Application listening on port 5000
+Fri Jun 02 2023 12:47:39 [right meow!] info: Database is connected to successfully
+Fri Jun 02 2023 12:47:39 [right meow!] info: Application listening on port 5000
+{
+  message: 'Database is connected to successfully',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-02T06:50:38.387Z'
+}
+{
+  message: 'Application listening on port 5000',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-02T06:50:38.445Z'
+}
+{
+  message: 'Database is connected to successfully',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-02T06:51:12.346Z'
+}
+{
+  message: 'Application listening on port 5000',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-02T06:51:12.376Z'
+}
+{
+  message: 'Database is connected to successfully',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-02T12:32:31.239Z'
+}
+{
+  message: 'Application listening on port 5000',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-02T12:32:31.281Z'
+}
+{
+  message: 'Database is connected to successfully',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-02T12:38:29.066Z'
+}
+{
+  message: 'Application listening on port 5000',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-02T12:38:29.119Z'
+}
