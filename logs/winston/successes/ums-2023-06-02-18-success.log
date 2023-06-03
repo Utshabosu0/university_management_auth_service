@@ -1,0 +1,18 @@
+{
+  message: 'Database is connected to successfully',
+  level: 'info',
+  label: 'UMS!',
+  timestamp: '2023-06-02T12:52:04.315Z'
+}
+{
+  message: 'Application listening on port 5000',
+  level: 'info',
+  label: 'UMS!',
+  timestamp: '2023-06-02T12:52:04.354Z'
+}
+Fri Jun 02 2023 18:54:23 [UMS!] info: Database is connected to successfully
+Fri Jun 02 2023 18:54:23 [UMS!] info: Application listening on port 5000
+Fri Jun 02 2023 18:54:44 [UMS] info: Database is connected to successfully
+Fri Jun 02 2023 18:54:44 [UMS] info: Application listening on port 5000
+Fri Jun 02 2023 18:55:13 [UMS] info: Database is connected to successfully
+Fri Jun 02 2023 18:55:13 [UMS] info: Application listening on port 5000

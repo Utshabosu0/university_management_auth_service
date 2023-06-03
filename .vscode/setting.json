@@ -1,6 +1,6 @@
 {
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true,
-        "source.organizeImorts": true
-    }
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.organizeImorts": true
+  }
 }
