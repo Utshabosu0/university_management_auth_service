@@ -1,16 +1,22 @@
+/* eslint-disable no-unused-expressions */
 import { ErrorRequestHandler } from 'express'
 import { IGenericErrorMessage } from '../../interface/error'
 import handleValidationError from '../../errors/handleValidationError'
 
 import ApiError from '../../errors/ApiError'
 import config from '../../config'
+import { errorLogger } from '../../shared/logger'
 
 const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
+  config.env === 'development'
+    ? console.log('globalErrorHandler~', error)
+    : errorLogger.error('globalErrorHandler~', error)
+
   let statusCode = 500
   let message = 'Something went wrong'
   let errorMessage: IGenericErrorMessage[] = []
 
-  if (error?.name === 'validationError') {
+  if (error?.name === 'ValidationError') {
     const simplefiedError = handleValidationError(error)
     statusCode = simplefiedError.statusCode
     message = simplefiedError.message
