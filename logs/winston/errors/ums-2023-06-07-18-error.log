@@ -1,0 +1,85 @@
+Wed Jun 07 2023 18:20:33 [UMS] error: Failed to connect database querySrv ETIMEOUT _mongodb._tcp.atlascluster.zznsycg.mongodb.net
+Wed Jun 07 2023 18:25:37 [UMS] error: globalErrorHandler~ [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "role"
+    ],
+    "message": "role is required"
+  }
+]
+Wed Jun 07 2023 18:26:29 [UMS] error: globalErrorHandler~ [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "role"
+    ],
+    "message": "role is required"
+  }
+]
+Wed Jun 07 2023 18:26:34 [UMS] error: globalErrorHandler~ [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "role"
+    ],
+    "message": "role is required"
+  }
+]
+Wed Jun 07 2023 18:28:49 [UMS] error: globalErrorHandler~ [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "role"
+    ],
+    "message": "role is required"
+  }
+]
+Wed Jun 07 2023 18:49:37 [UMS] error: globalErrorHandler~ [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "role"
+    ],
+    "message": "role is required"
+  }
+]
+Wed Jun 07 2023 18:57:23 [UMS] error: globalErrorHandler ~ [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "role"
+    ],
+    "message": "role is required"
+  }
+]
+Wed Jun 07 2023 18:57:38 [UMS] error: globalErrorHandler ~ [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "role"
+    ],
+    "message": "role is required"
+  }
+]
