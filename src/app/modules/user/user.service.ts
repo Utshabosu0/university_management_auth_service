@@ -7,7 +7,6 @@ import config from '../../../config';
 const createUser = async (user: IUser): Promise<IUser | null> => {
   //auto-generated incremental id
   const id = await generatedUserId();
-
   user.id = id;
   //default password
   if (!user.password) {
