@@ -80,6 +80,9 @@ const getAllSemesters = async (
   const { page, limit, skip, sortBy, sortOrder } =
     paginationHelper.calculatePagination(paginationOptions);
 
+  // const {page=1,limit=10}=paginationOptions
+  // const skip=(page-1)*limit
+
   const sortConditions: { [key: string]: SortOrder } = {};
 
   if (sortBy && sortOrder) {
