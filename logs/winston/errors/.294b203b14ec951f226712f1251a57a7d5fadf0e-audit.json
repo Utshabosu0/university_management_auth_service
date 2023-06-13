@@ -229,6 +229,11 @@
             "date": 1686683024174,
             "name": "C:\\programming hero\\university_management_auth_service\\logs\\winston\\errors\\ums-2023-06-14-01-error.log",
             "hash": "fa9154544908921070ef80398f1988936f73644e98dfe22acdfdadc288cc828b"
+        },
+        {
+            "date": 1686687353609,
+            "name": "C:\\programming hero\\university_management_auth_service\\logs\\winston\\errors\\ums-2023-06-14-02-error.log",
+            "hash": "13e5aa34b9050ec3849fa4c84ddbce3320e14657dba3d6458c27df8492c98819"
         }
     ],
     "hashType": "sha256"
