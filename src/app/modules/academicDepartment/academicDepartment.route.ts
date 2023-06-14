@@ -1,15 +1,13 @@
 import express from 'express';
 import validateRequest from '../../middlewares/validateRequest';
-import { AcademicDepartmentValidation } from './academicDepartment.validations';
 import { academicDepartmentController } from './academicDepartment.controller';
+import { academicDepartmentValidation } from './academicDepartment.validations';
 
 const router = express.Router();
 
 router.post(
   '/create-department',
-  validateRequest(
-    AcademicDepartmentValidation.createAcademicDepartmentZodSchema
-  ),
+  validateRequest(academicDepartmentValidation.createDepartmentZodSchema),
   academicDepartmentController.createDepartment
 );
 
@@ -17,9 +15,7 @@ router.get('/:id', academicDepartmentController.getSingleDepartment);
 
 router.patch(
   '/:id',
-  validateRequest(
-    AcademicDepartmentValidation.updateAcademicDepartmentZodSchema
-  ),
+  validateRequest(academicDepartmentValidation.updateDepartmentZodSchema),
   academicDepartmentController.updateDepartment
 );
 

@@ -9,7 +9,8 @@ import { IUser } from './user.interface';
 
 const createUser: RequestHandler = catchAsync(
   async (req: Request, res: Response) => {
-    const { user } = req.body;
+    // const { user } = req.body;
+    const user = req.body;
     const result = await userService.createUser(user);
 
     // res.status(200).json({

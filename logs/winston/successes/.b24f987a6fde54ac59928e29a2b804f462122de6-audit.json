@@ -234,6 +234,31 @@
             "date": 1686687353588,
             "name": "C:\\programming hero\\university_management_auth_service\\logs\\winston\\successes\\ums-2023-06-14-02-success.log",
             "hash": "4a089ceebaa0a5c15ad9f8f567a082a3637a4e788579c4597ec01c89826c6216"
+        },
+        {
+            "date": 1686719533363,
+            "name": "C:\\programming hero\\university_management_auth_service\\logs\\winston\\successes\\ums-2023-06-14-11-success.log",
+            "hash": "969aee4f112f4af3a516e33df4a1ac83bf5c8fabf0a979c4e199d966d70fa98a"
+        },
+        {
+            "date": 1686722414203,
+            "name": "C:\\programming hero\\university_management_auth_service\\logs\\winston\\successes\\ums-2023-06-14-12-success.log",
+            "hash": "0575fe457852a6264d98c0e727eda82690c5f7f8c3d19664621e8e5a712d44ef"
+        },
+        {
+            "date": 1686726040136,
+            "name": "C:\\programming hero\\university_management_auth_service\\logs\\winston\\successes\\ums-2023-06-14-13-success.log",
+            "hash": "b901e00779fcb99eef73dce2c16ed187b70101ba55326077f05eef399a271cef"
+        },
+        {
+            "date": 1686731694070,
+            "name": "C:\\programming hero\\university_management_auth_service\\logs\\winston\\successes\\ums-2023-06-14-14-success.log",
+            "hash": "9603fb73788ee2c6a77dcbd4dd1857c768a12f9e9c75256f7d466ddce7530dfd"
+        },
+        {
+            "date": 1686733384878,
+            "name": "C:\\programming hero\\university_management_auth_service\\logs\\winston\\successes\\ums-2023-06-14-15-success.log",
+            "hash": "90aaad83a657df1368198e279730d20e77fb018ab98abf94cd9cecfccd931d0e"
         }
     ],
     "hashType": "sha256"
