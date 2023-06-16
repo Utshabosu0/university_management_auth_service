@@ -27,7 +27,9 @@ const updateFaculty = async (
   id: string,
   payload: Partial<IAcademicFaculty>
 ): Promise<IAcademicFaculty | null> => {
-  const result = await AcademicFaculty.findOneAndUpdate({ _id: id }, payload);
+  const result = await AcademicFaculty.findOneAndUpdate({ _id: id }, payload, {
+    new: true,
+  });
   return result;
 };
 

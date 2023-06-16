@@ -33,7 +33,10 @@ const updateDepartment = async (
 ): Promise<IAcademicDepartment | null> => {
   const result = await AcademicDepartment.findOneAndUpdate(
     { _id: id },
-    payload
+    payload,
+    {
+      new: true,
+    }
   ).populate('academicFaculty');
   return result;
 };
