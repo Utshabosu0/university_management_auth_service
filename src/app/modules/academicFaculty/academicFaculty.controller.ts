@@ -76,6 +76,7 @@ const getAllFaculties = catchAsync(async (req: Request, res: Response) => {
     data: result.data,
   });
 });
+
 export const academicFacultyController = {
   createFaculty,
   getSingleFaculty,

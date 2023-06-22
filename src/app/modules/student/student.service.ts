@@ -63,9 +63,13 @@ const updateStudent = async (
     });
   }
 
-  const result = await Student.findOneAndUpdate({ id }, updatedStudentData, {
-    new: true,
-  });
+  const result = await Student.findOneAndUpdate(
+    { id: id },
+    updatedStudentData,
+    {
+      new: true,
+    }
+  );
   return result;
 };
 
