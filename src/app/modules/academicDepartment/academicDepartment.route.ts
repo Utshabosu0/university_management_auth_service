@@ -8,19 +8,19 @@ const router = express.Router();
 router.post(
   '/create-department',
   validateRequest(academicDepartmentValidation.createDepartmentZodSchema),
-  academicDepartmentController.createDepartment
+  academicDepartmentController.createAcademicDepartment
 );
 
-router.get('/:id', academicDepartmentController.getSingleDepartment);
+router.get('/:id', academicDepartmentController.getSingleAcademicDepartment);
 
 router.patch(
   '/:id',
   validateRequest(academicDepartmentValidation.updateDepartmentZodSchema),
-  academicDepartmentController.updateDepartment
+  academicDepartmentController.updateAcademicDepartment
 );
 
-router.delete('/:id', academicDepartmentController.deleteDepartment);
+router.delete('/:id', academicDepartmentController.deleteAcademicDepartment);
 
-router.get('/', academicDepartmentController.getAllDepartments);
+router.get('/', academicDepartmentController.getAllAcademicDepartments);
 
 export const AcademicDepartmentRoutes = router;

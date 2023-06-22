@@ -25,7 +25,7 @@ const createAcademicSemester = async (
   return result;
 };
 
-const getAllSemesters = async (
+const getAllAcademicSemesters = async (
   fillters: IAcademicSemesterFillters,
   paginationOptions: IPaginationOptions
 ): Promise<IGenericResponse<IAcademicSemester[]>> => {
@@ -95,7 +95,7 @@ const getAllSemesters = async (
     .sort(sortConditions)
     .skip(skip)
     .limit(limit);
-  const total = await AcademicSemester.countDocuments();
+  const total = await AcademicSemester.countDocuments(whereCondition);
   return {
     meta: {
       page,
@@ -106,14 +106,14 @@ const getAllSemesters = async (
   };
 };
 
-const getSingleSemester = async (
+const getSingleAcademicSemester = async (
   id: string
 ): Promise<IAcademicSemester | null> => {
   const result = await AcademicSemester.findById(id);
   return result;
 };
 
-const updateSemester = async (
+const updateAcademicSemester = async (
   id: string,
   payload: Partial<IAcademicSemester>
 ): Promise<IAcademicSemester | null> => {
@@ -131,7 +131,7 @@ const updateSemester = async (
   return result;
 };
 
-const deleteSemester = async (
+const deleteAcademicSemester = async (
   id: string
 ): Promise<IAcademicSemester | null> => {
   const result = await AcademicSemester.findByIdAndDelete(id);
@@ -140,8 +140,8 @@ const deleteSemester = async (
 
 export const academicSemesterService = {
   createAcademicSemester,
-  getAllSemesters,
-  getSingleSemester,
-  updateSemester,
-  deleteSemester,
+  getAllAcademicSemesters,
+  getSingleAcademicSemester,
+  updateAcademicSemester,
+  deleteAcademicSemester,
 };

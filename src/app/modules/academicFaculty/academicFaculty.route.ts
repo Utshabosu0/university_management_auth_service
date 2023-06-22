@@ -8,19 +8,19 @@ const router = express.Router();
 router.post(
   '/create-faculty',
   validateRequest(academicFacultyValidation.createFacultyZodSchema),
-  academicFacultyController.createFaculty
+  academicFacultyController.createAcademicFaculty
 );
 
-router.get('/:id', academicFacultyController.getSingleFaculty);
+router.get('/:id', academicFacultyController.getSingleAcademicFaculty);
 
 router.patch(
   '/:id',
   validateRequest(academicFacultyValidation.updatefacultyZodSchema),
-  academicFacultyController.updateFaculty
+  academicFacultyController.updateAcademicFaculty
 );
 
-router.delete('/:id', academicFacultyController.deleteFaculty);
+router.delete('/:id', academicFacultyController.deleteAcademicFaculty);
 
-router.get('/', academicFacultyController.getAllFaculties);
+router.get('/', academicFacultyController.getAllAcademicFaculties);
 
 export const AcademicFacultyRoutes = router;

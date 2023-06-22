@@ -9,7 +9,7 @@ import {
 } from './academicDepartment.interfaces';
 import { AcademicDepartment } from './academicDepartment.model';
 
-const createDepartment = async (
+const createAcademicDepartment = async (
   payload: IAcademicDepartment
 ): Promise<IAcademicDepartment | null> => {
   const result = (await AcademicDepartment.create(payload)).populate(
@@ -18,7 +18,7 @@ const createDepartment = async (
   return result;
 };
 
-const getSingleDepartment = async (
+const getSingleAcademicDepartment = async (
   id: string
 ): Promise<IAcademicDepartment | null> => {
   const result = await AcademicDepartment.findById(id).populate(
@@ -27,7 +27,7 @@ const getSingleDepartment = async (
   return result;
 };
 
-const updateDepartment = async (
+const updateAcademicDepartment = async (
   id: string,
   payload: Partial<IAcademicDepartment>
 ): Promise<IAcademicDepartment | null> => {
@@ -41,14 +41,14 @@ const updateDepartment = async (
   return result;
 };
 
-const deleteDepartment = async (
+const deleteAcademicDepartment = async (
   id: string
 ): Promise<IAcademicDepartment | null> => {
   const result = await AcademicDepartment.findByIdAndDelete(id);
   return result;
 };
 
-const getAllDepartments = async (
+const getAllAcademicDepartments = async (
   paginationOptions: IPaginationOptions,
   filters: IAcademicDepartmentFilters
 ): Promise<IGenericResponse<IAcademicDepartment[]>> => {
@@ -91,7 +91,7 @@ const getAllDepartments = async (
     .sort(sortConditions)
     .skip(skip)
     .limit(limit);
-  const total = await AcademicDepartment.countDocuments();
+  const total = await AcademicDepartment.countDocuments(whereCondition);
   return {
     meta: {
       page,
@@ -102,9 +102,9 @@ const getAllDepartments = async (
   };
 };
 export const academicDepartmentService = {
-  createDepartment,
-  getSingleDepartment,
-  updateDepartment,
-  deleteDepartment,
-  getAllDepartments,
+  createAcademicDepartment,
+  getSingleAcademicDepartment,
+  updateAcademicDepartment,
+  deleteAcademicDepartment,
+  getAllAcademicDepartments,
 };

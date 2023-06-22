@@ -30,75 +30,86 @@ const createAcademicSemester = catchAsync(
   }
 );
 
-const getAllSemesters = catchAsync(async (req: Request, res: Response) => {
-  // const paginationOptions = {
-  //   page: Number(req.query.page),
-  //   limit: Number(req.query.limit),
-  //   sortBy: req.query.sortBy,
-  //   sortOrder: req.query.sortOrder,
-  // };
+const getAllAcademicSemesters = catchAsync(
+  async (req: Request, res: Response) => {
+    // const paginationOptions = {
+    //   page: Number(req.query.page),
+    //   limit: Number(req.query.limit),
+    //   sortBy: req.query.sortBy,
+    //   sortOrder: req.query.sortOrder,
+    // };
 
-  const fillters = pick(req.query, academicSemesterFillterableFields);
+    const fillters = pick(req.query, academicSemesterFillterableFields);
 
-  const paginationOptions = pick(req.query, paginationFields);
+    const paginationOptions = pick(req.query, paginationFields);
 
-  const result = await academicSemesterService.getAllSemesters(
-    fillters,
-    paginationOptions
-  );
+    const result = await academicSemesterService.getAllAcademicSemesters(
+      fillters,
+      paginationOptions
+    );
 
-  sendResponse<IAcademicSemester[]>(res, {
-    statusCode: httpStatus.OK,
-    success: true,
-    message: 'Semester retrieved successfully',
-    meta: result.meta,
-    data: result.data,
-  });
-});
+    sendResponse<IAcademicSemester[]>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Semester retrieved successfully',
+      meta: result.meta,
+      data: result.data,
+    });
+  }
+);
 
-const getSingleSemester = catchAsync(async (req: Request, res: Response) => {
-  const id = req.params.id;
+const getSingleAcademicSemester = catchAsync(
+  async (req: Request, res: Response) => {
+    const id = req.params.id;
 
-  const result = await academicSemesterService.getSingleSemester(id);
+    const result = await academicSemesterService.getSingleAcademicSemester(id);
 
-  sendResponse<IAcademicSemester>(res, {
-    statusCode: httpStatus.OK,
-    success: true,
-    message: 'Semester retrieved successfully',
-    data: result,
-  });
-});
+    sendResponse<IAcademicSemester>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Semester retrieved successfully',
+      data: result,
+    });
+  }
+);
 
-const updateSemester = catchAsync(async (req: Request, res: Response) => {
-  const id = req.params.id;
-  const updateId = req.body;
-  const result = await academicSemesterService.updateSemester(id, updateId);
+const updateAcademicSemester = catchAsync(
+  async (req: Request, res: Response) => {
+    const id = req.params.id;
+    const updateId = req.body;
+    const result = await academicSemesterService.updateAcademicSemester(
+      id,
+      updateId
+    );
 
-  sendResponse<IAcademicSemester>(res, {
-    statusCode: httpStatus.OK,
-    success: true,
-    message: 'Semester updated successfully',
-    data: result,
-  });
-});
+    sendResponse<IAcademicSemester>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Semester updated successfully',
+      data: result,
+    });
+  }
+);
 
-const deleteSemester = catchAsync(async (req: Request, res: Response) => {
-  const id = req.params.id;
+const deleteAcademicSemester = catchAsync(
+  async (req: Request, res: Response) => {
+    const id = req.params.id;
 
-  const result = await academicSemesterService.deleteSemester(id);
+    const result = await academicSemesterService.deleteAcademicSemester(id);
 
-  sendResponse<IAcademicSemester>(res, {
-    statusCode: httpStatus.OK,
-    success: true,
-    message: 'Semester deleted successfully',
-    data: result,
-  });
-});
+    sendResponse<IAcademicSemester>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Semester deleted successfully',
+      data: result,
+    });
+  }
+);
 
 export const AcademicSemesterController = {
   createAcademicSemester,
-  getAllSemesters,
-  getSingleSemester,
-  updateSemester,
-  deleteSemester,
+  getAllAcademicSemesters,
+  getSingleAcademicSemester,
+  updateAcademicSemester,
+  deleteAcademicSemester,
 };

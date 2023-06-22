@@ -8,81 +8,93 @@ import { academicDepartmentFilterableFields } from './academicDepartment.constan
 import pick from '../../../shared/pick';
 import { paginationFields } from '../../../constant/paginationFields';
 
-const createDepartment = catchAsync(async (req: Request, res: Response) => {
-  const { ...academicDepartmentData } = req.body;
-  const result = await academicDepartmentService.createDepartment(
-    academicDepartmentData
-  );
+const createAcademicDepartment = catchAsync(
+  async (req: Request, res: Response) => {
+    const { ...academicDepartmentData } = req.body;
+    const result = await academicDepartmentService.createAcademicDepartment(
+      academicDepartmentData
+    );
 
-  sendResponse<IAcademicDepartment>(res, {
-    statusCode: httpStatus.OK,
-    success: true,
-    message: 'Academic Department is created successfully',
-    data: result,
-  });
-});
+    sendResponse<IAcademicDepartment>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Academic Department is created successfully',
+      data: result,
+    });
+  }
+);
 
-const getSingleDepartment = catchAsync(async (req: Request, res: Response) => {
-  const { id } = req.params;
-  const result = await academicDepartmentService.getSingleDepartment(id);
+const getSingleAcademicDepartment = catchAsync(
+  async (req: Request, res: Response) => {
+    const id = req.params.id;
+    const result = await academicDepartmentService.getSingleAcademicDepartment(
+      id
+    );
 
-  sendResponse<IAcademicDepartment>(res, {
-    statusCode: httpStatus.OK,
-    success: true,
-    message: 'Academic Department fetched successfully',
-    data: result,
-  });
-});
+    sendResponse<IAcademicDepartment>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Academic Department fetched successfully',
+      data: result,
+    });
+  }
+);
 
-const updateDepartment = catchAsync(async (req: Request, res: Response) => {
-  const { id } = req.params;
-  const updateData = req.body;
-  const result = await academicDepartmentService.updateDepartment(
-    id,
-    updateData
-  );
+const updateAcademicDepartment = catchAsync(
+  async (req: Request, res: Response) => {
+    const id = req.params.id;
+    const updateData = req.body;
+    const result = await academicDepartmentService.updateAcademicDepartment(
+      id,
+      updateData
+    );
 
-  sendResponse<IAcademicDepartment>(res, {
-    statusCode: httpStatus.OK,
-    success: true,
-    message: 'Academic Department updated successfully',
-    data: result,
-  });
-});
+    sendResponse<IAcademicDepartment>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Academic Department updated successfully',
+      data: result,
+    });
+  }
+);
 
-const deleteDepartment = catchAsync(async (req: Request, res: Response) => {
-  const { id } = req.params;
-  const result = await academicDepartmentService.deleteDepartment(id);
+const deleteAcademicDepartment = catchAsync(
+  async (req: Request, res: Response) => {
+    const id = req.params.id;
+    const result = await academicDepartmentService.deleteAcademicDepartment(id);
 
-  sendResponse<IAcademicDepartment>(res, {
-    statusCode: httpStatus.OK,
-    success: true,
-    message: 'Academic Department deleted successfully',
-    data: result,
-  });
-});
+    sendResponse<IAcademicDepartment>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Academic Department deleted successfully',
+      data: result,
+    });
+  }
+);
 
-const getAllDepartments = catchAsync(async (req: Request, res: Response) => {
-  const filters = pick(req.query, academicDepartmentFilterableFields);
-  const paginationOptions = pick(req.query, paginationFields);
+const getAllAcademicDepartments = catchAsync(
+  async (req: Request, res: Response) => {
+    const filters = pick(req.query, academicDepartmentFilterableFields);
+    const paginationOptions = pick(req.query, paginationFields);
 
-  const result = await academicDepartmentService.getAllDepartments(
-    paginationOptions,
-    filters
-  );
+    const result = await academicDepartmentService.getAllAcademicDepartments(
+      paginationOptions,
+      filters
+    );
 
-  sendResponse<IAcademicDepartment[]>(res, {
-    statusCode: httpStatus.OK,
-    success: true,
-    message: 'Academic Department retrieved successfully',
-    meta: result.meta,
-    data: result.data,
-  });
-});
+    sendResponse<IAcademicDepartment[]>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Academic Department retrieved successfully',
+      meta: result.meta,
+      data: result.data,
+    });
+  }
+);
 export const academicDepartmentController = {
-  createDepartment,
-  getSingleDepartment,
-  updateDepartment,
-  deleteDepartment,
-  getAllDepartments,
+  createAcademicDepartment,
+  getSingleAcademicDepartment,
+  updateAcademicDepartment,
+  deleteAcademicDepartment,
+  getAllAcademicDepartments,
 };

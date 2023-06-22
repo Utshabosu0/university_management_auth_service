@@ -7,8 +7,19 @@ const router = express.Router();
 
 router.post(
   '/create-student',
-  validateRequest(userValidation.createUserZodSchema),
+  validateRequest(userValidation.createStudentZodSchema),
   usersController.createStudent
 );
 
+router.post(
+  '/create-faculty',
+  validateRequest(userValidation.createFacultyZodSchema),
+  usersController.createFaculty
+);
+
+router.post(
+  '/create-faculty',
+  validateRequest(userValidation.createAdminZodSchema),
+  usersController.createAdmin
+);
 export const UserRoutes = router;

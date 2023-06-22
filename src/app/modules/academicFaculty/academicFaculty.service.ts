@@ -9,21 +9,21 @@ import {
 import { AcademicFaculty } from './academicFaculty.model';
 import { academicFacultySearchableFields } from './academicFaculty.constants';
 
-const createFaculty = async (
+const createAcademicFaculty = async (
   payload: IAcademicFaculty
 ): Promise<IAcademicFaculty | null> => {
   const result = await AcademicFaculty.create(payload);
   return result;
 };
 
-const getSingleFaculty = async (
+const getSingleAcademicFaculty = async (
   id: string
 ): Promise<IAcademicFaculty | null> => {
   const result = await AcademicFaculty.findById(id);
   return result;
 };
 
-const updateFaculty = async (
+const updateAcademicFaculty = async (
   id: string,
   payload: Partial<IAcademicFaculty>
 ): Promise<IAcademicFaculty | null> => {
@@ -33,12 +33,14 @@ const updateFaculty = async (
   return result;
 };
 
-const deleteFaculty = async (id: string): Promise<IAcademicFaculty | null> => {
+const deleteAcademicFaculty = async (
+  id: string
+): Promise<IAcademicFaculty | null> => {
   const result = await AcademicFaculty.findByIdAndDelete(id);
   return result;
 };
 
-const getAllFaculties = async (
+const getAllAcademicFaculties = async (
   paginationOptions: IPaginationOptions,
   filters: IAcademicFacultyFilters
 ): Promise<IGenericResponse<IAcademicFaculty[]>> => {
@@ -80,7 +82,7 @@ const getAllFaculties = async (
     .sort(sortConditions)
     .skip(skip)
     .limit(limit);
-  const total = await AcademicFaculty.countDocuments();
+  const total = await AcademicFaculty.countDocuments(whereCondition);
   return {
     meta: {
       page,
@@ -91,9 +93,9 @@ const getAllFaculties = async (
   };
 };
 export const academicFacultyService = {
-  createFaculty,
-  getSingleFaculty,
-  updateFaculty,
-  deleteFaculty,
-  getAllFaculties,
+  createAcademicFaculty,
+  getSingleAcademicFaculty,
+  updateAcademicFaculty,
+  deleteAcademicFaculty,
+  getAllAcademicFaculties,
 };
