@@ -57,7 +57,7 @@ const createAdmin: RequestHandler = catchAsync(
   }
 );
 
-export const usersController = {
+export const userController = {
   createStudent,
   createFaculty,
   createAdmin,
