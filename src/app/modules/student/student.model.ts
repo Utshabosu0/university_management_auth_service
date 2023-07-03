@@ -14,7 +14,7 @@ export const studentSchema = new Schema<IStudent, StudentModel>(
       required: true,
     },
     dateOfBirth: { type: String },
-    gender: { type: String, enum: gender },
+    gender: { type: String, enum: gender, required: true },
     bloodGroup: {
       type: String,
       enum: bloodGroup,
